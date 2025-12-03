@@ -28,11 +28,11 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
   };
 
   const currentColors = colors[theme] || colors.dark;
-  const portfolioUrl = "sahilfullstackportfolio.netlify.app";
+  const portfolioUrl = "aashcharya-portfolio.vercel.app";
   const welcomeMessages = [
-    "Crafting digital experiences",
-    "Software Engineer",
-    "Full-stack development"
+    "Software Developer & Competitive Programmer",
+    "Building High-Performance Systems",
+    "Top 3% LeetCode | IIT Jodhpur"
   ];
 
   useEffect(() => {
@@ -237,7 +237,7 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.5 }}
                 >
-                  (This is my portfolio website)
+                  (Welcome to my portfolio website.)
                 </motion.p>
               </motion.div>
             )}
@@ -266,7 +266,7 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
                 >
-                  Loading my best work for you...
+                  Loading high-performance systems & competitive programming achievements...
                 </motion.p>
               </motion.div>
             )}

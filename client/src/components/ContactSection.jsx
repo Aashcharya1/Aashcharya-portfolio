@@ -5,13 +5,13 @@ import {
   MapPin,
   Phone,
   Send,
-  Twitter,
   Github,
   Loader2
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -72,29 +72,64 @@ export const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://formspree.io/f/xwpbojaj', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // EmailJS configuration from environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_8jjoxp9';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_9j0j7nk';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'yoL1zshYtWFmSAQ3z';
 
-      if (response.ok) {
-        toast({
-          title: "Message sent! 🎉",
-          description: "I'll get back to you within 24 hours.",
-          variant: "success",
-          className: "bg-green-600 text-white dark:bg-green-500 border border-green-700 shadow-lg"
-        });
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        throw new Error('Failed to send message');
+      // Validate EmailJS configuration
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS is not configured. Please check your environment variables.');
       }
+
+      // Prepare email template parameters
+      // EmailJS standard variable names: {{user_name}}, {{user_email}}, {{message}}
+      const templateParams = {
+        user_name: formData.name,
+        user_email: formData.email,
+        message: formData.message,
+        from_name: formData.name, // Alternative variable name
+        from_email: formData.email, // Alternative variable name
+      };
+
+      // Send email using EmailJS (publicKey as 4th parameter)
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      console.log('EmailJS success:', result);
+
+      toast({
+        title: "Message sent! 🎉",
+        description: "I'll get back to you within 24 hours.",
+        variant: "success",
+        className: "bg-green-600 text-white dark:bg-green-500 border border-green-700 shadow-lg"
+      });
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('EmailJS error:', error);
+      console.error('Error details:', {
+        serviceId,
+        templateId,
+        error: error.text || error.message
+      });
+      
+      let errorMessage = "Please try again or email me directly at aashcharyagorakh@gmail.com";
+      
+      if (error.text) {
+        if (error.text.includes('Invalid template ID')) {
+          errorMessage = "Template configuration error. Please check EmailJS template settings.";
+        } else if (error.text.includes('Invalid service ID')) {
+          errorMessage = "Service configuration error. Please check EmailJS service settings.";
+        }
+      }
+      
       toast({
         title: "Oops! Something went wrong",
-        description: "Please try again or email me directly at codewithkinu@gmail.com",
+        description: errorMessage,
         variant: "destructive"
       });
     } finally {
@@ -133,10 +168,25 @@ export const ContactSection = () => {
                 <div>
                   <p className="text-xs sm:text-sm text-muted-foreground">Email</p>
                   <a
-                    href="mailto:codewithkinu@gmail.com"
+                    href="mailto:aashcharyagorakh@gmail.com"
                     className="text-sm sm:text-base font-medium hover:text-primary transition-colors"
                   >
-                    codewithkinu@gmail.com
+                    aashcharyagorakh@gmail.com
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 hover:bg-accent/30 rounded-lg sm:rounded-xl transition-all duration-300">
+                <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-primary/10 text-primary">
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
+                </div>
+                <div>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Academic Email</p>
+                  <a
+                    href="mailto:b23es1001@iitj.ac.in"
+                    className="text-sm sm:text-base font-medium hover:text-primary transition-colors"
+                  >
+                    b23es1001@iitj.ac.in
                   </a>
                 </div>
               </div>
@@ -148,10 +198,10 @@ export const ContactSection = () => {
                 <div>
                   <p className="text-xs sm:text-sm text-muted-foreground">Phone</p>
                   <a
-                    href="tel:+919315145594"
+                    href="tel:+919595914199"
                     className="text-sm sm:text-base font-medium hover:text-primary transition-colors"
                   >
-                    +91 9315145594
+                    +91 9595914199
                   </a>
                 </div>
               </div>
@@ -163,7 +213,7 @@ export const ContactSection = () => {
                 <div>
                   <p className="text-xs sm:text-sm text-muted-foreground">Location</p>
                   <span className="text-sm sm:text-base font-medium">
-                    Bengaluru, Karnataka India
+                    IIT Jodhpur, Rajasthan, India
                   </span>
                 </div>
               </div>
@@ -176,22 +226,17 @@ export const ContactSection = () => {
                   {
                     icon: Linkedin,
                     label: "LinkedIn",
-                    url: "https://www.linkedin.com/in/codewithkinu",
-                  },
-                  {
-                    icon: Twitter,
-                    label: "Twitter",
-                    url: "#",
+                    url: "https://www.linkedin.com/in/aashcharya-gorakh-a764a2287/",
                   },
                   {
                     icon: Github,
                     label: "GitHub",
-                    url: "https://github.com/Sahilmd01",
+                    url: "https://github.com/Aashcharya1",
                   },
                   {
                     icon: Instagram,
                     label: "Instagram",
-                    url: "https://www.instagram.com/dubbinut",
+                    url: "https://www.instagram.com/aashcharya_g/",
                   },
                 ].map((social, index) => (
                   <a

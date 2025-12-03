@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Briefcase, Code, User, Download, Calendar, Sparkles, Target, Github, Linkedin, Twitter, Mail, Star } from 'lucide-react';
+import { Briefcase, Code, User, Download, Calendar, Sparkles, Target, Github, Linkedin, Mail, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const AboutSection = () => {
@@ -8,31 +8,29 @@ export const AboutSection = () => {
   const [counter, setCounter] = useState(0);
 
   const achievements = [
-    { number: "15+", label: "Projects", icon: <Briefcase className="h-5 w-5" />, suffix: "" },
-    { number: "1", label: "Years Exp", icon: <Calendar className="h-5 w-5" />, suffix: "+" },
-    { number: "99", label: "Success", icon: <Target className="h-5 w-5" />, suffix: "%" },
-    { number: "10", label: "Clients", icon: <User className="h-5 w-5" />, suffix: "+" }
+    { number: "1000+", label: "DSA Problems", icon: <Briefcase className="h-5 w-5" />, suffix: "" },
+    { number: "1546", label: "Codeforces", icon: <Calendar className="h-5 w-5" />, suffix: "" },
+    { number: "1964", label: "LeetCode", icon: <Target className="h-5 w-5" />, suffix: "" } 
   ];
 
   const techStack = [
-    { category: "Frontend", items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "Tailwind"] },
-    { category: "Backend", items: ["Node.js", "Express", "Java", "Python"] },
-    { category: "Cloud", items: ["AWS", "Docker", "Vercel", "MongoDB"] }
+    { category: "Primary Arsenal", items: ["C++ (C++17, STL)", "Python", "SQL", "Multithreading", "Linux/Bash", "Git", "Docker", "Redis"] },
+    { category: "Systems & Core CS", items: ["Concurrency", "Operating Systems", "OOP Design", "CMake", "GDB", "Object-Oriented Design"] },
+    { category: "Secondary Skills", items: ["FastAPI", "PostgreSQL", "MongoDB", "PyTorch", "NumPy", "Pandas"] }
   ];
 
-  const features = ["Full-stack expertise", "Clean, maintainable code", "Performance optimization", "Agile methodology", "24/7 support", "Timely delivery"];
+  const features = ["Top 3% LeetCode (1964 Knight)", "Codeforces Specialist (1546)", "Meta HackerCup Top 808 Global", "JEE Advanced Top 1.25% (15K rank)", "Systems & Performance Engineering", "Seeking Quant/SDE Internships"];
 
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />, href: "https://www.github.com/sahilmd01" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/codewithkinu" },
-    { icon: <Twitter className="h-5 w-5" />, href: "#" },
-    { icon: <Mail className="h-5 w-5" />, href: "mailto:sahilmd.dev@gmail.com" }
+    { icon: <Github className="h-5 w-5" />, href: "https://github.com/Aashcharya1" },
+    { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/aashcharya-gorakh-a764a2287/" },
+    { icon: <Mail className="h-5 w-5" />, href: "mailto:aashcharyagorakh@gmail.com" }
   ];
 
   const tabContent = {
-    personal: "Passionate about creating digital solutions that make a difference. When I'm not coding, I'm exploring new technologies, contributing to open-source, and mentoring aspiring developers.",
-    professional: "With 1+ years in full-stack development, I've delivered 15+ successful projects using modern technologies. I specialize in scalable architecture and performance optimization.",
-    approach: "I believe in clean code, thorough testing, and user-centered design. My process emphasizes collaboration, agile methodologies, and continuous improvement."
+    personal: "I am an undergraduate student (Majors in CSE) at IIT Jodhpur with a strong foundation in Data Structures, Algorithms, and System Design. Currently working as a Software Development Intern at CyberUltron Pvt. Ltd., where I architect high-throughput microservices and optimize system performance.",
+    professional: "My engineering philosophy revolves around efficiency—whether it's shaving milliseconds off a database query or optimizing a graph algorithm for O(V+E) time complexity. With a background in competitive programming (1964 LeetCode, Top 3% Global) and hands-on experience in microservices architecture, I bridge the gap between theoretical mathematics and production-grade software.",
+    approach: "Currently seeking Software Engineering and Quant Developer internships where I can leverage my skills in C++, distributed systems, and mathematical modeling. I optimize for performance, scalability, and maintainability in all my work, focusing on building systems that can handle real-world scale."
   };
 
   useEffect(() => {
@@ -42,15 +40,16 @@ export const AboutSection = () => {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => setCounter(prev => (prev + 1) % 4), 2000);
+    const interval = setInterval(() => setCounter(prev => (prev + 1) % 3), 2000);
     return () => clearInterval(interval);
   }, []);
 
   // Programmatic download function
   const handleDownload = () => {
+    // Download resume PDF file
     const link = document.createElement('a');
-    link.href = '/Sahil-resume.pdf'; // Must be in public folder
-    link.download = 'Sahil-resume.pdf';
+    link.href = '/Resume.pdf';
+    link.download = 'Aashcharya_Gorakh_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -102,7 +101,7 @@ export const AboutSection = () => {
                   {/* Profile Image */}
                   <div className="relative flex-shrink-0">
                     <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl transition-all duration-500 group-hover:border-primary/40 group-hover:scale-105 md:group-hover:scale-110 relative">
-                      <img src="/profile-logo.png" alt="MD Sahil" className="w-full h-full object-cover" />
+                      <img src="/Aashcharya.png" alt="Aashcharya Gorakh" className="w-full h-full object-cover" />
                       <div className="absolute -bottom-2 -right-2 w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full border-4 border-background flex items-center justify-center">
                         <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
                       </div>
@@ -111,8 +110,9 @@ export const AboutSection = () => {
 
                   {/* Achievements */}
                   <div className="flex-1 text-center md:text-left">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">MD Sahil</h2>
-                    <p className="text-primary text-base sm:text-lg font-semibold mb-3 sm:mb-4">Full Stack Developer</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">Aashcharya Gorakh</h2>
+                    <p className="text-primary text-base sm:text-lg font-semibold mb-3 sm:mb-1">Majors in CSE (B.Tech) @ IIT Jodhpur (2023-2027) </p>
+                    <p className="text-primary text-base sm:text-lg font-semibold mb-3 sm:mb-4">Software Developer & Competitive Programmer</p>
                     <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
                       {achievements.map((achievement, index) => (
                         <div key={index} className={`p-2 sm:p-3 rounded-xl bg-background/50 border border-border transition-all duration-300 hover:scale-105 hover:border-primary/30 ${counter === index ? 'bg-primary/10 border-primary/50' : ''}`}>

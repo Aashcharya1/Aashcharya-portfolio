@@ -1,350 +1,448 @@
-# 💼 Developer Portfolio – React + Vite + Tailwind
-## ⭐ Star this repo if you like it!
+# 💼 Aashcharya Gorakh - Portfolio Website
 
+<div align="center">
 
-A fast, modern, and responsive developer portfolio website built using **React**, **Vite**, and **Tailwind CSS**. Designed to showcase your projects, skills, and contact information in a clean, professional format.
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.3.4-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.4-38B2AC?logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/Framer_Motion-12.17.1-0055FF?logo=framer&logoColor=white)
 
-## 🚀 Tech Stack
+A modern, responsive portfolio website showcasing my work as a Software Developer & Competitive Programmer. Built with React, Vite, and TailwindCSS, featuring smooth animations, dark mode support, and real-time LeetCode submission tracking.
 
-- ⚛️ React (with Vite for fast dev/build)
-- 💨 Tailwind CSS (utility-first styling)
-- 🔧 JavaScript (ES6+)
-- 💡 Optional: Framer Motion for animations
+[🌐 Live Demo](https://your-portfolio-url.vercel.app) • [📧 Contact](mailto:aashcharyagorakh@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/aashcharya-gorakh-a764a2287/)
 
-## 📸 Screenshots
+</div>
 
-### 🏠 Home Page  
-![Home Page](sampleimage/sample1.png)
-![Home Page](sampleimage/sample2.png)
-
-### 🧰 other section  
-![Section](sampleimage/sample3.png)
-![Section](sampleimage/sample4.png)
-![Section](sampleimage/sample5.png)
-![Section](sampleimage/sample6.png)
-![Section](sampleimage/sample7.png)
+---
 
 ## ✨ Features
 
-- Responsive and mobile-friendly design
-- Easy customization of content and sections
-- Project and skill sections configured via simple data files
-- Smooth navigation and clean layout
-- Deployed and optimized using Vite
+### 🎨 **Design & User Experience**
+- **Modern UI/UX**: Clean, professional design with smooth animations
+- **Dark Mode Support**: Automatic theme detection with manual toggle
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Smooth Animations**: Powered by Framer Motion for engaging interactions
+- **Star Field Background**: Animated starfield for visual appeal
 
-## 🛠️ Getting Started
+### 📊 **Portfolio Sections**
+- **Hero Section**: Dynamic code snippet animation with competitive programming stats
+- **About Me**: Multi-tab interface showcasing personal, professional, and approach perspectives
+- **Experience**: Detailed work experience with technologies and achievements
+- **Skills**: Categorized skill showcase with proficiency levels and icons
+- **Projects**: Featured projects with categories, tech stacks, and live demos
+- **Achievements**: Competitive programming highlights and certificates
+- **LeetCode Heatmap**: Real-time submission activity tracking with instant refresh
+- **Coding Profiles**: Links to LeetCode, Codeforces, and GeeksforGeeks
+- **Contact Form**: Functional contact form with EmailJS integration
+
+### 🚀 **Technical Features**
+- **Real-time Updates**: LeetCode submission heatmap updates instantly
+- **Email Integration**: Contact form sends notifications via EmailJS
+- **SEO Optimized**: Comprehensive meta tags and structured data
+- **Fast Loading**: Optimized bundle size and lazy loading
+- **Accessible**: WCAG compliant with semantic HTML
+
+---
+
+## 🛠️ Tech Stack
+
+### **Core Technologies**
+- **React 18.3.1** - UI library
+- **Vite 5.3.4** - Build tool and dev server
+- **React Router DOM 7.5.1** - Client-side routing
+- **TailwindCSS 4.1.4** - Utility-first CSS framework
+
+### **UI & Animation**
+- **Framer Motion 12.17.1** - Animation library
+- **Lucide React** - Icon library
+- **Radix UI** - Accessible component primitives
+- **React Icons 5.5.0** - Additional icons
+
+### **Utilities**
+- **EmailJS** - Email service integration
+- **next-themes** - Theme management
+- **clsx & tailwind-merge** - Conditional class utilities
+- **class-variance-authority** - Component variants
+
+### **Development Tools**
+- **ESLint** - Code linting
+- **Vercel Analytics** - Analytics integration
+
+---
+
+## 📁 Project Structure
+
+```
+React-Portfolio/
+├── client/
+│   ├── public/
+│   │   ├── Aashcharya.png              # Profile image
+│   │   ├── logo.png                    # Favicon
+│   │   ├── Resume.pdf                  # Resume file
+│   │   ├── projects/                   # Project images
+│   │   └── [certificates]              # Achievement certificates
+│   │
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── AboutSection.jsx        # About me section
+│   │   │   ├── AchievementsSection.jsx # Competitive programming achievements
+│   │   │   ├── ContactSection.jsx      # Contact form
+│   │   │   ├── ExperienceSection.jsx   # Work experience
+│   │   │   ├── Footer.jsx              # Footer component
+│   │   │   ├── HeroSection.jsx         # Hero section with stats
+│   │   │   ├── LeetCodeHeatmap.jsx     # LeetCode submission heatmap
+│   │   │   ├── Navbar.jsx              # Navigation bar
+│   │   │   ├── ProfilesSection.jsx     # Coding profiles links
+│   │   │   ├── ProjectsSection.jsx     # Projects showcase
+│   │   │   ├── SkillsSection.jsx       # Skills with categories
+│   │   │   ├── StarBackground.jsx      # Animated background
+│   │   │   ├── WelcomeScreen.jsx       # Loading screen
+│   │   │   └── ui/                     # Reusable UI components
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Home.jsx                # Main home page
+│   │   │   └── NotFound.jsx            # 404 page
+│   │   │
+│   │   ├── hooks/
+│   │   │   └── use-toast.js            # Toast notification hook
+│   │   │
+│   │   ├── lib/
+│   │   │   └── utils.js                # Utility functions
+│   │   │
+│   │   ├── App.jsx                     # Root component
+│   │   ├── main.jsx                    # Entry point
+│   │   └── index.css                   # Global styles
+│   │
+│   ├── index.html                      # HTML template
+│   ├── package.json                    # Dependencies
+│   ├── vite.config.js                  # Vite configuration
+│   └── vercel.json                     # Vercel deployment config
+│
+└── README.md                           # This file
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** (v18 or higher)
+- **npm** or **yarn** package manager
+- **Git** for version control
+
+### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/react-vite-portfolio.git
-   cd react-vite-portfolio
-   ````
+   git clone https://github.com/Aashcharya1/React-Portfolio.git
+   cd React-Portfolio/client
+   ```
 
 2. **Install dependencies**
-
    ```bash
    npm install
    ```
 
-3. **Run the development server**
+3. **Create environment variables**
+   ```bash
+   # Create .env file in the client directory
+   touch .env
+   ```
+   
+   Add the following variables (optional - defaults are provided):
+   ```env
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
 
+4. **Start development server**
    ```bash
    npm run dev
    ```
 
-4. **Customize your content**
-
-   * Update `/src/data/projects.js` with your projects
-   * Update `/src/data/skills.js` with your tech stack
-   * Modify `/src/components` and `/src/pages` for layout or section changes
-
-## 🏗️ Build for Production
-
-```bash
-npm run build
-```
-
-## 📤 Deploying
-
-You can deploy the site using platforms like:
-
-* [Vercel](https://vercel.com/)
-* [Netlify](https://www.netlify.com/)
-* [GitHub Pages](https://pages.github.com/) (with additional config)
-
-## 📬 Contact
-
-Feel free to connect with me through the Contact section on the site or via [LinkedIn](https://linkedin.com/in/codewithkinu) or [Email](mailto:codeithkinu@gmail.com).
+5. **Open in browser**
+   ```
+   http://localhost:5173
+   ```
 
 ---
 
-**Made with ❤️ by Sahil  using React, Vite & Tailwind CSS**
+## ⚙️ Configuration
 
+### EmailJS Setup (Contact Form)
 
-## 📬 here is privious homepage.. -----
- ```bash
-import { ArrowDown, MousePointerClick, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
+The contact form uses EmailJS to send email notifications. To set up:
 
-export const HeroSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    }
-  };
-
-  const floatingVariants = {
-    float: {
-      y: [0, -15, 0],
-      transition: {
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden bg-gradient-to-b from-background via-background/80 to-primary/5"
-      ref={ref}
-    >
-      {/* Floating particles background */}
-      <div className="absolute inset-0 overflow-hidden -z-10">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-primary/10"
-            style={{
-              width: Math.random() * 10 + 2 + 'px',
-              height: Math.random() * 10 + 2 + 'px',
-              left: Math.random() * 100 + '%',
-              top: Math.random() * 100 + '%',
-            }}
-            animate={{
-              y: [0, (Math.random() - 0.5) * 100],
-              x: [0, (Math.random() - 0.5) * 50],
-              opacity: [0.2, 0.8, 0.2],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'linear'
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="container max-w-5xl mx-auto text-center z-10">
-        <motion.div
-          className="space-y-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-        >
-          <motion.div variants={itemVariants}>
-            <motion.div 
-              className="text-lg md:text-xl font-mono text-primary mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              <Sparkles className="h-4 w-4" />
-              Full Stack Developer
-            </motion.div>
-          </motion.div>
-
-          <motion.h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
-            variants={itemVariants}
-          >
-            <span className="inline-block">I'm</span>
-            <motion.span 
-              className="text-primary inline-block ml-3 relative"
-              variants={itemVariants}
-            >
-              Sahil
-              <motion.span 
-                className="absolute -bottom-2 left-0 h-1 bg-primary w-full"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-              />
-            </motion.span>
-
-          </motion.h1>
-
-          <motion.p 
-            className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light"
-            variants={itemVariants}
-          >
-            Crafting <span className="text-primary font-medium">digital experiences</span> that blend beautiful design with <span className="text-secondary font-medium">cutting-edge technology</span> to solve real-world problems.
-          </motion.p>
-
-          <motion.div 
-            className="pt-8 flex flex-col sm:flex-row justify-center gap-6"
-            variants={itemVariants}
-          >
-            <motion.a 
-              href="#projects" 
-              className="relative cosmic-button group overflow-hidden px-8 py-4 rounded-full font-medium text-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ boxShadow: "0 0 0 0px rgba(99, 102, 241, 0.5)" }}
-              animate={{ boxShadow: "0 0 0 10px rgba(99, 102, 241, 0)" }}
-              transition={{ repeat: Infinity, duration: 2, delay: 1.5 }}
-            >
-              <span className="relative z-10">Explore My Work</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-100 group-hover:opacity-90 transition-opacity duration-300"></span>
-            </motion.a>
-            
-            <motion.a 
-              href="#contact" 
-              className="relative outline-button group overflow-hidden px-8 py-4 rounded-full font-medium text-lg border-2 border-primary/50 hover:border-primary transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                Let's Connect 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                </svg>
-              </span>
-              <span className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-300"></span>
-            </motion.a>
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Tech stack floating badges */}
-      <motion.div 
-        className="absolute left-8 bottom-1/3 hidden lg:flex flex-col gap-4 items-start"
-        variants={floatingVariants}
-        animate="float"
-      >
-        {['React', 'Node.js', 'TypeScript', 'Java', 'MongoDB'].map((tech, i) => (
-          <motion.div 
-            key={tech}
-            className="px-4 py-2 bg-background/80 backdrop-blur-sm border rounded-full text-sm shadow-sm"
-            initial={{ x: -20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1 + i * 0.1 }}
-          >
-            {tech}
-          </motion.div>
-        ))}
-      </motion.div>
-
-      <motion.div 
-        className="absolute right-8 top-1/3 hidden lg:flex flex-col gap-4 items-end"
-        variants={floatingVariants}
-        animate="float"
-      >
-        {['Express', 'Next.js', 'PostgreSQL', 'Tailwind', 'Docker'].map((tech, i) => (
-          <motion.div 
-            key={tech}
-            className="px-4 py-2 bg-background/80 backdrop-blur-sm border rounded-full text-sm shadow-sm"
-            initial={{ x: 20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1.2 + i * 0.1 }}
-          >
-            {tech}
-          </motion.div>
-        ))}
-      </motion.div>
-
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ 
-          opacity: [0, 1, 1, 0],
-          y: [0, 10, 0, -10],
-        }}
-        transition={{
-          duration: 2.5,
-          repeat: Infinity,
-          repeatDelay: 0.5,
-          ease: "easeInOut"
-        }}
-      >
-        <span className="text-sm text-muted-foreground mb-2 flex items-center gap-1">
-          <MousePointerClick className="h-3 w-3" /> Scroll to explore
-        </span>
-        <ArrowDown className="h-6 w-6 text-primary" />
-      </motion.div>
-
-      {/* Animated gradient background elements */}
-      <motion.div 
-        className="absolute inset-0 -z-10 overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        transition={{ delay: 1, duration: 1.5 }}
-      >
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-gradient-to-r from-primary to-purple-500 blur-[100px] opacity-30"
-          animate={{
-            x: [0, 20, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            repeatType: 'reverse',
-            ease: 'easeInOut'
-          }}
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-gradient-to-r from-secondary to-pink-500 blur-[120px] opacity-30"
-          animate={{
-            x: [0, -30, 0],
-            y: [0, 40, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            repeatType: 'reverse',
-            ease: 'easeInOut'
-          }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/2 w-60 h-60 rounded-full bg-gradient-to-r from-accent to-blue-500 blur-[90px] opacity-30"
-          animate={{
-            x: [0, 25, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            repeatType: 'reverse',
-            ease: 'easeInOut'
-          }}
-        />
-      </motion.div>
-    </section>
-  );
-};
+1. Create an account at [EmailJS](https://www.emailjs.com/)
+2. Create a service (Gmail, Outlook, etc.)
+3. Create an email template with variables:
+   - `{{user_name}}`
+   - `{{user_email}}`
+   - `{{message}}`
+4. Add your credentials to `.env` file:
+   ```env
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
    ```
+
+**Note**: Default values are provided in the code, but it's recommended to use your own EmailJS account.
+
+### Customization
+
+#### Update Personal Information
+
+1. **Hero Section** (`src/components/HeroSection.jsx`):
+   - Update name, title, and stats
+   - Modify code snippets
+   - Adjust achievement numbers
+
+2. **About Section** (`src/components/AboutSection.jsx`):
+   - Update bio and personal information
+   - Modify achievements and tech stack
+   - Update social links
+
+3. **Experience** (`src/components/ExperienceSection.jsx`):
+   - Update work experience details
+   - Modify achievements and technologies
+
+4. **Projects** (`src/components/ProjectsSection.jsx`):
+   - Update project details
+   - Add/remove projects
+   - Update GitHub and demo URLs
+
+5. **Skills** (`src/components/SkillsSection.jsx`):
+   - Update skills and proficiency levels
+   - Modify skill categories
+   - Update icon URLs
+
+6. **Achievements** (`src/components/AchievementsSection.jsx`):
+   - Update competitive programming achievements
+   - Add/remove certificates
+   - Update certificate file paths
+
+7. **Contact** (`src/components/ContactSection.jsx`):
+   - Update contact information
+   - Modify EmailJS configuration
+
+#### Update Images
+
+1. Replace `public/Aashcharya.png` with your profile picture
+2. Replace `public/logo.png` with your logo
+3. Update project images in `public/projects/`
+4. Add certificates to `public/` folder
+
+#### Update Resume
+
+1. Replace `public/Resume.pdf` with your resume
+2. Update resume filename in `HeroSection.jsx` and `AboutSection.jsx`
+
+#### LeetCode Heatmap
+
+The LeetCode submission heatmap is automatically fetched from:
+```
+https://leetcard.jacoblin.cool/aashcharya?ext=heatmap
+```
+
+To change the username, update `leetcodeUsername` in `src/components/LeetCodeHeatmap.jsx`.
+
+---
+
+## 📜 Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server on `http://localhost:5173` |
+| `npm run build` | Build production-ready optimized bundle |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint to check code quality |
+
+---
+
+## 🚀 Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. **Push your code to GitHub**
+   ```bash
+   git add .
+   git commit -m "Deploy portfolio"
+   git push origin main
+   ```
+
+2. **Import to Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+   - Set root directory to `client`
+   - Add environment variables (if using EmailJS)
+   - Click "Deploy"
+
+3. **Configure Custom Domain** (Optional)
+   - Go to project settings
+   - Add your custom domain
+   - Update DNS records as instructed
+
+### Deploy to Netlify
+
+1. **Build the project**
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy**
+   - Go to [netlify.com](https://netlify.com)
+   - Drag and drop the `dist` folder
+   - Or connect your GitHub repository
+   - Set build command: `npm run build`
+   - Set publish directory: `dist`
+
+### Other Deployment Options
+
+- **GitHub Pages**: Use GitHub Actions for automated deployment
+- **AWS Amplify**: Connect repository for CI/CD deployment
+- **Cloudflare Pages**: Fast deployment with global CDN
+
+---
+
+## 🎨 Customization Guide
+
+### Color Scheme
+
+The portfolio uses TailwindCSS with custom theme colors. To modify colors:
+
+1. Update `src/index.css` for custom CSS variables
+2. Modify TailwindCSS config for theme colors
+3. Update component-level color classes
+
+### Animations
+
+Animations are powered by Framer Motion. To customize:
+
+1. Modify animation variants in component files
+2. Adjust transition durations and delays
+3. Update motion component props
+
+### Sections Order
+
+To reorder sections, update `src/pages/Home.jsx`:
+
+```jsx
+<main>
+  <HeroSection />
+  <AboutSection />
+  <ExperienceSection />
+  <ProfilesSection />
+  <SkillsSection />
+  <ProjectsSection />
+  <AchievementsSection />
+  <ContactSection />
+</main>
+```
+
+---
+
+## 📱 Responsive Design
+
+The portfolio is fully responsive with breakpoints:
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1024px
+- **Desktop**: > 1024px
+
+All components use TailwindCSS responsive utilities (`sm:`, `md:`, `lg:`) for optimal viewing on all devices.
+
+---
+
+## 🔍 SEO Features
+
+- **Meta Tags**: Comprehensive Open Graph and Twitter Card tags
+- **Structured Data**: JSON-LD schema for rich snippets
+- **Semantic HTML**: Proper heading hierarchy and landmarks
+- **Alt Text**: Descriptive alt text for all images
+- **Sitemap**: Ready for sitemap.xml integration
+- **Robots.txt**: Configured for search engine crawling
+
+---
+
+## 🐛 Troubleshooting
+
+### Contact Form Not Working
+
+- Check EmailJS credentials in `.env` file
+- Verify EmailJS template variables match code
+- Check browser console for error messages
+- Ensure EmailJS service is active
+
+### LeetCode Heatmap Not Loading
+
+- Verify LeetCode username is correct
+- Ensure LeetCode profile is public
+- Check browser console for CORS errors
+- Try refreshing the page
+
+### Build Errors
+
+- Clear `node_modules` and reinstall: `rm -rf node_modules && npm install`
+- Clear Vite cache: `rm -rf node_modules/.vite`
+- Check Node.js version compatibility
+- Update dependencies: `npm update`
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+**Aashcharya Gorakh**
+
+- 🌐 Website: [Portfolio](https://your-portfolio-url.vercel.app)
+- 💼 LinkedIn: [aashcharya-gorakh-a764a2287](https://www.linkedin.com/in/aashcharya-gorakh-a764a2287/)
+- 💻 GitHub: [@Aashcharya1](https://github.com/Aashcharya1)
+- 📧 Email: aashcharyagorakh@gmail.com
+- 🏆 LeetCode: [@aashcharya](https://leetcode.com/u/aashcharya/)
+- 🎯 Codeforces: [@aashcharyagorakh](https://codeforces.com/profile/aashcharyagorakh)
+
+---
+
+## 🙏 Acknowledgments
+
+- **LeetCode Stats Card** by [Jacob Lin](https://github.com/JacobLinCool) for the submission heatmap
+- **Lucide Icons** for beautiful icons
+- **Framer Motion** for smooth animations
+- **TailwindCSS** for utility-first styling
+- **Vite** for blazing-fast development experience
+
+---
+
+## ⭐ Show Your Support
+
+If you like this portfolio, give it a ⭐ on GitHub!
+
+---
+
+<div align="center">
+
+**Made with ❤️ by Aashcharya Gorakh**
+
+*B.Tech CSE @ IIT Jodhpur | Software Developer & Competitive Programmer*
+
+</div>
+

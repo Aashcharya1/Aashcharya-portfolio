@@ -1,4 +1,4 @@
-import { ArrowDown, MousePointerClick, Sparkles, Code, Palette, Rocket, Award, Download, Calendar, Shield, Zap, Users, TrendingUp, Briefcase, Mail } from "lucide-react";
+import { ArrowDown, MousePointerClick, Sparkles, Code, Palette, Rocket, Award, Download, Calendar, Zap, Users, TrendingUp, Briefcase, Mail } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
@@ -9,27 +9,25 @@ export const HeroSection = () => {
   const [displayedCode, setDisplayedCode] = useState("");
 
   const codeSnippets = [
-    "import { FullStackDeveloper } from 'sahil.dev';",
+    "import { SoftwareEngineer } from 'aashcharya.dev';",
     "",
-    "const developer = new FullStackDeveloper({",
-    "  name: 'Sahil',",
-    "  stack: ['React', 'Next.js', 'Node.js', 'TypeScript'],",
-    "  focus: 'Building scalable web applications',",
-    "  status: 'Open to new opportunities'",
+    "const engineer = new SoftwareEngineer({",
+    "  name: 'Aashcharya Gorakh',",
+    "  stack: ['C++', 'Python', 'Distributed Systems', 'Algorithms'],",
+    "  focus: 'High-Performance Systems & Scalable Backends',",
+    "  status: 'Software Development Intern @ CyberUltron'",
     "});",
     "",
-    "await developer.launchPortfolio();",
-    "// Featured: E-commerce, SaaS, Enterprise, Startup MVPs",
+    "await engineer.build();",
+    "// Featured: Systems Design, Competitive Programming, Quant",
     "",
-    "developer.connect();",
+    "engineer.connect();",
     "console.log('🚀 Let's build something exceptional together!');"
   ];
 
   const achievements = [
-    { number: "1+", label: "Years in Production", icon: <Shield className="h-3 w-3" /> },
-    { number: "15+", label: "Projects Delivered", icon: <TrendingUp className="h-3 w-3" /> },
-    { number: "100%", label: "Client Satisfaction", icon: <Award className="h-3 w-3" /> },
-    { number: "15+", label: "Projects completed", icon: <Zap className="h-3 w-3" /> }
+    { number: "1964", label: "LeetCode (Knight)", subtitle: "Top 3% Global", icon: <Award className="h-3 w-3" /> },
+    { number: "1546", label: "Codeforces", subtitle: "Specialist", icon: <TrendingUp className="h-3 w-3" /> }
   ];
 
   useEffect(() => {
@@ -54,8 +52,8 @@ export const HeroSection = () => {
   }, [displayedCode, currentCodeLine]);
 
   const handleViewResume = () => {
-    // Open resume in new tab
-    window.open('/Sahil-resume.pdf', '_blank', 'noopener,noreferrer');
+    // Open resume PDF in new tab for viewing
+    window.open('/Resume.pdf', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -99,43 +97,43 @@ export const HeroSection = () => {
         <motion.div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-20" initial="hidden" animate={isInView ? "visible" : "hidden"} variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.25, delayChildren: 0.5 } } }}>
           
           <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
-            <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 backdrop-blur-sm" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              <Briefcase className="h-4 w-4" /> Currently Accepting new Opportunities
-            </motion.div>
-
             <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              <span className="block text-foreground">I'm Sahil</span>
+              <span className="block text-foreground">I'm Aashcharya Gorakh</span>
+              <span className="block text-foreground mt-2">Software Developer</span>
               <motion.span className="block bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent mt-2" animate={{ backgroundPosition: ['0%', '100%', '0%'] }} transition={{ duration: 8, repeat: Infinity }} style={{ backgroundSize: '200% 100%' }}>
-                Full-Stack Engineer
+                & Competitive Programmer
               </motion.span>
             </motion.h1>
 
             <motion.p className="text-lg sm:text-xl text-muted-foreground mt-6 leading-relaxed max-w-2xl" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              I build <span className="text-primary font-semibold">high-performance web applications</span> that drive business growth. Specializing in React, Node.js, and scalable architecture for startups and enterprises.
+              B.Tech @ <span className="text-primary font-semibold">IIT Jodhpur</span> | Top 3% LeetCode | Building High-Performance Systems & Scalable Backends
             </motion.p>
 
-            <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
+            <motion.div className="grid grid-cols-2 gap-4 my-8" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               {achievements.map((achievement, index) => (
                 <div key={index} className="text-center p-4 rounded-xl bg-background/60 border border-border/50 backdrop-blur-sm hover:border-primary/30 transition-all duration-300">
-                  <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="flex items-center justify-center gap-2 mb-1">
                     {achievement.icon}
                     <div className="text-2xl font-bold text-foreground">{achievement.number}</div>
                   </div>
-                  <div className="text-xs text-muted-foreground">{achievement.label}</div>
+                  <div className="text-xs font-semibold text-foreground">{achievement.label}</div>
+                  {achievement.subtitle && (
+                    <div className="text-[10px] text-muted-foreground mt-1">{achievement.subtitle}</div>
+                  )}
                 </div>
               ))}
             </motion.div>
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              <motion.a href="#projects" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-primary-foreground shadow-lg hover:shadow-xl text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+                <motion.a href="#projects" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-primary-foreground shadow-lg hover:shadow-xl text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
                 <Code className="h-5 w-5" /> 
-                <span>View Case Studies</span>
+                <span>View Projects</span>
                 <TrendingUp className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </motion.a>
               
               <motion.a href="#contact" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold border border-primary/50 text-foreground hover:border-primary transition-all duration-300 bg-background/80 backdrop-blur-sm text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
                 <Mail className="h-4 w-4" /> 
-                <span>Technical Interview</span>
+                <span>Get In Touch</span>
               </motion.a>
               
               <motion.button 
@@ -151,7 +149,7 @@ export const HeroSection = () => {
 
             <motion.div className="mt-6 text-center lg:text-left" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <div className="text-sm text-muted-foreground">
-                🚀 <span className="text-primary font-semibold">Available Immediately</span> for Full-Stack and Frontend roles
+                🚀 <span className="text-primary font-semibold">Seeking</span> Software Engineering & Quant Developer Internships
               </div>
             </motion.div>
           </div>
@@ -183,10 +181,10 @@ export const HeroSection = () => {
                             ${index < currentCodeLine ? 'opacity-100' : 'opacity-0'}
                             ${index === currentCodeLine ? 'opacity-100' : ''}
                             transition-opacity duration-150 ease-in-out
-                            ${line.includes("import") ? "text-purple-400 font-semibold" : 
+                            ${                              line.includes("import") ? "text-purple-400 font-semibold" : 
                               line.includes("const") || line.includes("new") ? "text-blue-400 font-semibold" :
-                              line.includes("React") || line.includes("Node.js") || line.includes("TypeScript") ? "text-cyan-400" :
-                              line.includes("FullStackDeveloper") ? "text-emerald-400 font-semibold" :
+                              line.includes("C++") || line.includes("Python") || line.includes("Distributed Systems") || line.includes("Algorithms") ? "text-cyan-400" :
+                              line.includes("SoftwareEngineer") ? "text-emerald-400 font-semibold" :
                               line.includes("//") ? "text-muted-foreground italic" :
                               line.includes("await") || line.includes("connect") ? "text-yellow-400" :
                               line.includes("'") ? "text-amber-400" : 
