@@ -7,20 +7,20 @@ const profiles = [
     name: "LeetCode",
     username: "aashcharya",
     url: "https://leetcode.com/u/aashcharya/",
-    description: "Top 3% Global | Knight (1964 Rating) | DSA",
+    description: "Top 2% Global | Knight (2011 Rating) | DSA",
     icon: "leetcode",
     color: "from-amber-500 to-orange-600",
-    stats: ["1964 Rating", "Top 3% Global", "Problem Solving", "Knight"]
+    stats: ["600+ Problems", "2011 Rating", "Top 2% Global", "Problem Solving", "Knight"]
   },
   {
     id: 2,
     name: "Codeforces",
     username: "aashcharyagorakh",
     url: "https://codeforces.com/profile/aashcharyagorakh",
-    description: "Specialist | Max Rating 1546 | Competitive Programming",
+    description: "Expert | Max Rating 1634 | Competitive Programming",
     icon: "codeforces",
     color: "from-blue-500 to-cyan-600",
-    stats: ["1546 Rating", "Specialist", "Competitive Programming"]
+    stats: ["1634 Rating", "Expert", "Competitive Programming"]
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const profiles = [
     description: "Problem Solving & Algorithm Practice",
     icon: "gfg",
     color: "from-green-500 to-emerald-600",
-    stats: ["800+ Problems", "DSA Practice", "Algorithm Solutions"]
+    stats: ["DSA Practice", "Algorithm Solutions"]
   }
 ];
 

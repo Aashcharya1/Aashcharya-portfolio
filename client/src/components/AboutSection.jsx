@@ -9,8 +9,8 @@ export const AboutSection = () => {
 
   const achievements = [
     { number: "1000+", label: "DSA Problems", icon: <Briefcase className="h-5 w-5" />, suffix: "" },
-    { number: "1546", label: "Codeforces", icon: <Calendar className="h-5 w-5" />, suffix: "" },
-    { number: "1964", label: "LeetCode", icon: <Target className="h-5 w-5" />, suffix: "" } 
+    { number: "1634", label: "Codeforces (Expert)", icon: <Calendar className="h-5 w-5" />, suffix: "" },
+    { number: "2011", label: "LeetCode (Knight)", icon: <Target className="h-5 w-5" />, suffix: "" } 
   ];
 
   const techStack = [
@@ -19,7 +19,7 @@ export const AboutSection = () => {
     { category: "Secondary Skills", items: ["FastAPI", "PostgreSQL", "MongoDB", "PyTorch", "NumPy", "Pandas"] }
   ];
 
-  const features = ["Top 3% LeetCode (1964 Knight)", "Codeforces Specialist (1546)", "Meta HackerCup Top 808 Global", "JEE Advanced Top 1.25% (15K rank)", "Systems & Performance Engineering", "Seeking Quant/SDE Internships"];
+  const features = ["Top 2% LeetCode (2011 Knight)", "Codeforces Expert (1634)", "Meta HackerCup Top 808 Global", "JEE Advanced Top 1.25% (15K rank)", "Systems & Performance Engineering", "Seeking Quant/SDE Internships"];
 
   const socialLinks = [
     { icon: <Github className="h-5 w-5" />, href: "https://github.com/Aashcharya1" },
