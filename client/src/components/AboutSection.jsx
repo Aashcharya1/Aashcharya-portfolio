@@ -29,7 +29,7 @@ export const AboutSection = () => {
 
   const tabContent = {
     personal: "I am an undergraduate student (Majors in CSE) at IIT Jodhpur with a strong foundation in Data Structures, Algorithms, and System Design. Currently working as a Software Development Intern at CyberUltron Pvt. Ltd., where I architect high-throughput microservices and optimize system performance.",
-    professional: "My engineering philosophy revolves around efficiency—whether it's shaving milliseconds off a database query or optimizing a graph algorithm for O(V+E) time complexity. With a background in competitive programming (1964 LeetCode, Top 3% Global) and hands-on experience in microservices architecture, I bridge the gap between theoretical mathematics and production-grade software.",
+    professional: "My engineering philosophy revolves around efficiency—whether it's shaving milliseconds off a database query or optimizing a graph algorithm for O(V+E) time complexity. With a background in competitive programming (2011 LeetCode, Top 2% Global) and hands-on experience in microservices architecture, I bridge the gap between theoretical mathematics and production-grade software.",
     approach: "Currently seeking Software Engineering and Quant Developer internships where I can leverage my skills in C++, distributed systems, and mathematical modeling. I optimize for performance, scalability, and maintainability in all my work, focusing on building systems that can handle real-world scale."
   };
 

@@ -26,8 +26,8 @@ export const HeroSection = () => {
   ];
 
   const achievements = [
-    { number: "1964", label: "LeetCode (Knight)", subtitle: "Top 3% Global", icon: <Award className="h-3 w-3" /> },
-    { number: "1546", label: "Codeforces", subtitle: "Specialist", icon: <TrendingUp className="h-3 w-3" /> }
+    { number: "2011", label: "LeetCode (Knight)", subtitle: "Top 2% Global", icon: <Award className="h-3 w-3" /> },
+    { number: "1634", label: "Codeforces", subtitle: "Expert", icon: <TrendingUp className="h-3 w-3" /> }
   ];
 
   useEffect(() => {
@@ -106,7 +106,7 @@ export const HeroSection = () => {
             </motion.h1>
 
             <motion.p className="text-lg sm:text-xl text-muted-foreground mt-6 leading-relaxed max-w-2xl" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              B.Tech @ <span className="text-primary font-semibold">IIT Jodhpur</span> | Top 3% LeetCode | Building High-Performance Systems & Scalable Backends
+              B.Tech @ <span className="text-primary font-semibold">IIT Jodhpur</span> | Top 2% LeetCode | Building High-Performance Systems & Scalable Backends
             </motion.p>
 
             <motion.div className="grid grid-cols-2 gap-4 my-8" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>

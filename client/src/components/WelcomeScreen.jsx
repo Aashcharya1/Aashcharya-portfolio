@@ -32,7 +32,7 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
   const welcomeMessages = [
     "Software Developer & Competitive Programmer",
     "Building High-Performance Systems",
-    "Top 3% LeetCode | IIT Jodhpur"
+    "Top 2% LeetCode | IIT Jodhpur"
   ];
 
   useEffect(() => {

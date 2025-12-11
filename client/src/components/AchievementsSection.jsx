@@ -205,15 +205,15 @@ export const AchievementsSection = () => {
               <div className="text-sm text-muted-foreground">DSA Problems Solved</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-1">1964</div>
+              <div className="text-3xl font-bold text-primary mb-1">2011</div>
               <div className="text-sm text-muted-foreground">LeetCode Rating (Knight)</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-1">1546</div>
-              <div className="text-sm text-muted-foreground">Codeforces (Specialist)</div>
+              <div className="text-3xl font-bold text-primary mb-1">1634</div>
+              <div className="text-sm text-muted-foreground">Codeforces (Expert)</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-1">Top 3%</div>
+              <div className="text-3xl font-bold text-primary mb-1">Top 2%</div>
               <div className="text-sm text-muted-foreground">Global LeetCode Rank</div>
             </div>
           </div>
