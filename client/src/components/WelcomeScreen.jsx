@@ -30,7 +30,7 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
   const currentColors = colors[theme] || colors.dark;
   const portfolioUrl = "aashcharya-portfolio.vercel.app";
   const welcomeMessages = [
-    "Software Developer & Competitive Programmer",
+    "Software Engineer & Competitive Programmer",
     "Building High-Performance Systems",
     "Top 2% LeetCode | Expert Codeforces | IIT Jodhpur"
   ];
