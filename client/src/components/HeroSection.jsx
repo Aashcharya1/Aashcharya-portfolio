@@ -99,14 +99,14 @@ export const HeroSection = () => {
           <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
             <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <span className="block text-foreground">I'm Aashcharya Gorakh</span>
-              <span className="block text-foreground mt-2">Software Developer</span>
+              <span className="block text-foreground mt-2">Software Engineer</span>
               <motion.span className="block bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent mt-2" animate={{ backgroundPosition: ['0%', '100%', '0%'] }} transition={{ duration: 8, repeat: Infinity }} style={{ backgroundSize: '200% 100%' }}>
                 & Competitive Programmer
               </motion.span>
             </motion.h1>
 
             <motion.p className="text-lg sm:text-xl text-muted-foreground mt-6 leading-relaxed max-w-2xl" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              B.Tech @ <span className="text-primary font-semibold">IIT Jodhpur</span> | Top 2% LeetCode | Building High-Performance Systems & Scalable Backends
+              B.Tech @ <span className="text-primary font-semibold">IIT Jodhpur</span> | Top 2% LeetCode | Expert Codeforces | Building High-Performance Systems & Scalable Backends
             </motion.p>
 
             <motion.div className="grid grid-cols-2 gap-4 my-8" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
@@ -149,7 +149,7 @@ export const HeroSection = () => {
 
             <motion.div className="mt-6 text-center lg:text-left" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <div className="text-sm text-muted-foreground">
-                🚀 <span className="text-primary font-semibold">Seeking</span> Software Engineering & Quant Developer Internships
+                🚀 <span className="text-primary font-semibold">Seeking</span> Software Engineering & Quant Internships
               </div>
             </motion.div>
           </div>

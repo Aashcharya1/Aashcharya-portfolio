@@ -69,7 +69,7 @@ export const Footer = () => {
             <motion.div variants={itemVariants} className="space-y-4">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">AASHCHARYA GORAKH</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                B.Tech CSE student at IIT Jodhpur | ML Researcher | Competitive Programmer
+                B.Tech CSE student at IIT Jodhpur | Software Engineer | Competitive Programmer
               </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
